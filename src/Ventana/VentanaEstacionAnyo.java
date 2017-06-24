@@ -17,6 +17,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 
 /*
@@ -38,8 +40,9 @@ public class VentanaEstacionAnyo extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaEstacionAnyo() {
+		setTitle("Ventana Estacion");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 550, 366);
+		setBounds(100, 100, 550, 310);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -55,6 +58,9 @@ public class VentanaEstacionAnyo extends JFrame {
 		panel.setLayout(gbl_panel);
 		
 		JLabel lblMes = new JLabel("Introducir mes:");
+		lblMes.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblMes.setForeground(new Color(0, 0, 0));
+		lblMes.setToolTipText("");
 		GridBagConstraints gbc_lblMes = new GridBagConstraints();
 		gbc_lblMes.anchor = GridBagConstraints.NORTHWEST;
 		gbc_lblMes.insets = new Insets(0, 0, 5, 5);
@@ -72,6 +78,7 @@ public class VentanaEstacionAnyo extends JFrame {
 		textField_mes.setColumns(10);
 		
 		JLabel lblEstacion = new JLabel("Estaci\u00F3n seg\u00FAn el mes:");
+		lblEstacion.setFont(new Font("Tahoma", Font.BOLD, 18));
 		GridBagConstraints gbc_lblEstacion = new GridBagConstraints();
 		gbc_lblEstacion.insets = new Insets(0, 0, 5, 5);
 		gbc_lblEstacion.anchor = GridBagConstraints.NORTHEAST;
@@ -89,6 +96,7 @@ public class VentanaEstacionAnyo extends JFrame {
 		textField_estacion.setColumns(10);
 		
 		JButton btnSalir = new JButton("SALIR");
+		btnSalir.setFont(new Font("Tahoma", Font.ITALIC, 16));
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -96,6 +104,7 @@ public class VentanaEstacionAnyo extends JFrame {
 		});
 		
 		JButton btnValidar = new JButton("VALIDAR");
+		btnValidar.setFont(new Font("Tahoma", Font.BOLD, 16));
 		GridBagConstraints gbc_btnValidar = new GridBagConstraints();
 		gbc_btnValidar.insets = new Insets(0, 0, 5, 5);
 		gbc_btnValidar.gridx = 1;
